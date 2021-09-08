@@ -1,0 +1,21 @@
+server:
+  port: 10000
+
+spring:
+  application:
+    name: provider
+
+service:
+  version: 1.0.0
+
+dubbo:
+  application:
+    name: provider
+  scan:
+    base-packages: com.gavin.provider.service
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    timeout: 60000
